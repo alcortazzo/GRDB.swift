@@ -50,7 +50,7 @@ public protocol Association: DerivableRequest, Sendable {
     ///     static let author = belongsTo(Author.self)
     /// }
     /// ```
-    associatedtype OriginRowDecoder
+    associatedtype OriginRowDecoder: _SendableMetaType
     
     var _sqlAssociation: _SQLAssociation { get set }
     

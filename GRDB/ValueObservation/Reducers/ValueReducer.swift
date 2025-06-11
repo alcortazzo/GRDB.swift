@@ -58,7 +58,7 @@ public protocol _ValueReducerFetcher: Sendable {
 /// ### Supporting Types
 ///
 /// - ``ValueReducers``
-public protocol ValueReducer: _ValueReducer { }
+public protocol ValueReducer: _ValueReducer, _SendableMetaType { }
 
 /// A namespace for concrete types that adopt the ``ValueReducer`` protocol.
 public enum ValueReducers { }

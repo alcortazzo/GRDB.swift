@@ -25,7 +25,7 @@
 /// As in the example above, `HasOneThroughAssociation` is always built from
 /// two other associations. Those associations can be any association that
 /// declares a to-one connection (``AssociationToOne``).
-public struct HasOneThroughAssociation<Origin, Destination> {
+public struct HasOneThroughAssociation<Origin: _SendableMetaType, Destination: _SendableMetaType> {
     public var _sqlAssociation: _SQLAssociation
     
     init<Pivot, Target>(

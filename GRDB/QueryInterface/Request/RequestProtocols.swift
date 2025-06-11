@@ -11,7 +11,7 @@ public protocol TypedRequest<RowDecoder> {
     /// ```swift
     /// let request = Player.all()
     /// ```
-    associatedtype RowDecoder
+    associatedtype RowDecoder: _SendableMetaType
 }
 
 // MARK: - SelectionRequest

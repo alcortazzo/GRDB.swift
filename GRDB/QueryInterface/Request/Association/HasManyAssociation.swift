@@ -57,7 +57,7 @@
 ///     static let books = hasMany(Book.self, using: ForeignKey(...))
 /// }
 /// ```
-public struct HasManyAssociation<Origin, Destination> {
+public struct HasManyAssociation<Origin: _SendableMetaType, Destination: _SendableMetaType> {
     public var _sqlAssociation: _SQLAssociation
     
     init(

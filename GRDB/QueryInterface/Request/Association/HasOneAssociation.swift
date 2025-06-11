@@ -64,7 +64,7 @@
 ///     static let demographics = hasOne(Demographics.self, using: ForeignKey(...)
 /// }
 /// ```
-public struct HasOneAssociation<Origin, Destination> {
+public struct HasOneAssociation<Origin: _SendableMetaType, Destination: _SendableMetaType> {
     public var _sqlAssociation: _SQLAssociation
     
     init(

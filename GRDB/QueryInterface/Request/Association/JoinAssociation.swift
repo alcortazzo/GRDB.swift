@@ -1,6 +1,6 @@
 /// The `JoinAssociation` joins common table expression to regular
 /// tables or other common table expressions.
-public struct JoinAssociation<Origin, Destination> {
+public struct JoinAssociation<Origin: _SendableMetaType, Destination: _SendableMetaType> {
     public var _sqlAssociation: _SQLAssociation
     
     /// Creates a `JoinAssociation` whose key is the table name of the relation.

@@ -95,7 +95,7 @@
 /// - ``updateAndFetchAll(_:onConflict:_:)``
 /// - ``updateAndFetchSet(_:onConflict:_:)``
 /// - ``updateAndFetchStatement(_:onConflict:_:selection:)``
-public struct QueryInterfaceRequest<RowDecoder> {
+public struct QueryInterfaceRequest<RowDecoder: _SendableMetaType> {
     var relation: SQLRelation
 }
 

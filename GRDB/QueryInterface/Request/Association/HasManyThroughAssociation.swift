@@ -44,7 +44,7 @@
 ///
 /// As in the examples above, `HasManyThroughAssociation` is always built from
 /// two other associations. Those associations can be any ``Association``.
-public struct HasManyThroughAssociation<Origin, Destination> {
+public struct HasManyThroughAssociation<Origin: _SendableMetaType, Destination: _SendableMetaType> {
     public var _sqlAssociation: _SQLAssociation
     
     init<Pivot, Target>(

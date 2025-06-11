@@ -1,6 +1,6 @@
 /// A [common table expression](https://sqlite.org/lang_with.html) that can be
 /// used with the GRDB query interface.
-public struct CommonTableExpression<RowDecoder> {
+public struct CommonTableExpression<RowDecoder: _SendableMetaType> {
     /// The table name of the common table expression.
     ///
     /// For example:

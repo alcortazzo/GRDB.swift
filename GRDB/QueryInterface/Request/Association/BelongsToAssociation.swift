@@ -58,7 +58,7 @@
 ///     static let author = belongsTo(Author.self, using: ForeignKey(...))
 /// }
 /// ```
-public struct BelongsToAssociation<Origin, Destination> {
+public struct BelongsToAssociation<Origin: _SendableMetaType, Destination: _SendableMetaType> {
     public var _sqlAssociation: _SQLAssociation
     
     init(
